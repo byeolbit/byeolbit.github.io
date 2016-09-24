@@ -87,6 +87,7 @@ h6, .h6 {
     margin-bottom: 0;
     font-size: 60px;
     font-weight: normal;
+    text-align: center;
 }
 .blog-description {
     font-size: 20px;
