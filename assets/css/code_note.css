@@ -73,7 +73,6 @@ h6, .h6 {
     border-left: 5px solid transparent;
 }
 
-
 /*
  * Blog name and description
  */
@@ -86,9 +85,15 @@ h6, .h6 {
     margin-top: 30px;
     margin-bottom: 0;
     font-size: 60px;
-    font-weight: normal;
+    font-weight: bold;
     text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+.site-title {
+    color : #303030;
+}
+
 .blog-description {
     font-size: 20px;
     color: #999;
