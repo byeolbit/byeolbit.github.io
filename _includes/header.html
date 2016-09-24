@@ -3,10 +3,6 @@
     {% assign custom_url = site.url | append: site.baseurl %}
     {% assign full_base_url = site.github.url | default: custom_url %}
     <h1>
-    {% for my_page in site.pages %}
-        {% if my_page.title %}
-            <a href="{{ my_page.url | prepend: full_base_url }}">{{ my_page.title | escape }}</a>
-        {% endif %}
-    {% endfor %}
+        <a href="{{ site.url | prepend: full_base_url }}">{{ site.title | escape }}</a>
     </h1>
 </header>
