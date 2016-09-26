@@ -1,9 +1,0 @@
----
-layout: post
-title:  "Github pages Test"
-date:   2016-09-13 15:20:23 +0900
-categories: jekyll update
----
-Github pages Test
-
-앞으로 코드노트로 사용할 깃헙 페이지를 세팅중입니다.
