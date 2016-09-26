@@ -156,9 +156,9 @@ h6, .h6 {
     border-radius: 30px;
 }
 
-.post-list h1 {
+.page-title {
     font-size: 48px;
-    margin-bottom: 40px;
+    padding-bottom: 12px;
 
 }
 
@@ -215,17 +215,23 @@ h6, .h6 {
 }
 
 .blog-post-title {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-size: 38px;
 }
 
 .blog-post-meta {
+    font-weight: 300;
     margin-bottom: 20px;
     color: #999;
 }
 
 .blog-post-content {
     font-weight: 300;
+}
+
+.blog-post-content p {
+    padding-bottom: 10px;
+    line-height: 1.6em;
 }
 
 .return-to-list {
@@ -256,6 +262,7 @@ h6, .h6 {
 }
 
 .copyright {
+    padding-top: 10px;
     text-size: 14px;
     text-align: center;
     color: gray;
