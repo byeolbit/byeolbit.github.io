@@ -12,6 +12,8 @@ layout: default
     {{ content }}
   </div>
 
+  {% assign site.disqus.shortname = "codenote"%}
+
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
   {% endif %}
