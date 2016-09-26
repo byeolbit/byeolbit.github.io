@@ -228,6 +228,9 @@ h6, .h6 {
 .blog-post-content {
     font-weight: 300;
 }
+.profile-container{
+    text-align: center;
+}
 
 .profile_pic{
     border-radius: 50%;
