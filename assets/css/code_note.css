@@ -84,7 +84,7 @@ h6, .h6 {
 .blog-title {
     margin-left: auto;
     margin-right: auto;
-    padding: 20px 0px 10px 0px;
+    padding: 20px 0 10px 0;
     margin-bottom: 0;
     text-align: center;
 }
@@ -229,6 +229,12 @@ h6, .h6 {
     font-weight: 300;
 }
 
+.profile_pic{
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .blog-post-content p {
     padding-bottom: 10px;
     line-height: 1.6em;
@@ -263,7 +269,7 @@ h6, .h6 {
 
 .copyright {
     padding-top: 10px;
-    text-size: 14px;
+    font-size: 14px;
     text-align: center;
     color: gray;
     font-weight: 300;
