@@ -158,7 +158,7 @@ h6, .h6 {
 
 .post-list h1 {
     font-size: 48px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 
 }
 
@@ -166,7 +166,7 @@ h6, .h6 {
     font-size: 30px;
 }
 
-.post-list{
+.post-list {
     padding-left: 0;
 }
 
@@ -181,15 +181,18 @@ h6, .h6 {
     border-color: #303030;
 }
 
+.rss-subscribe {
+    font-weight: 300;
+}
+
 .list-container {
     padding-bottom: 20px;
     border-bottom: 1px solid darkgray;
 }
 
-.list-container:last-child{
+.list-container:last-child {
     border-bottom: none;
 }
-
 
 .post-meta {
     line-height: 2em;
@@ -247,6 +250,7 @@ h6, .h6 {
 }
 
 .footer-col {
+    font-weight: 300;
     display: inline-block;
     width: 45%;
 }
