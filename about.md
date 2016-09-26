@@ -7,6 +7,4 @@ permalink: /about/
 
 # Sanggyeong Jo
 
-Studying computer science & engineering
-<br>
-Love web development
+<p class="profile-container">Studying computer science & engineering</p>
