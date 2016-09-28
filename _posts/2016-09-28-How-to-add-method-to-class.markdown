@@ -9,7 +9,7 @@ description: Difference between Class.prototype.method and Class.method
 There are two ways to add method to class<br>
 
 1. Class method - Using prototype
-```javascript
+```
 function aClass(){
         this.a = 1;
         this.b = 2;
@@ -29,7 +29,7 @@ function aClass(){
 
 
 2. Static method
-```javascript
+```
     function bClass(){
         this.a = 3;
         this.b = 4;
