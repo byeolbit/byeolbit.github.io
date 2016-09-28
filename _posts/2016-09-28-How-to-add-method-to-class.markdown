@@ -6,10 +6,10 @@ categories: javascript
 description: Difference between Class.prototype.method and Class.method
 ---
 
-There are two ways to add method to class
+There are two ways to add method to class<br>
 
 1. Class method - Using prototype
-'''javascript
+```javascript
 function aClass(){
         this.a = 1;
         this.b = 2;
@@ -24,12 +24,12 @@ function aClass(){
     var new_aClass = new aClass();
 
     new_aClass.logsomething();
-'''
+```
 
 
 
 2. Static method
-'''javascript
+```javascript
     function bClass(){
         this.a = 3;
         this.b = 4;
@@ -44,7 +44,7 @@ function aClass(){
     new_bClass.logsomething = logsomething;
 
     new_bClass.logsomething();  //result is 7
-'''
+```
 
-In 'bClass.logsomething = logsomething;' logsomething() is static method.<br>
+In `bClass.logsomething = logsomething;` logsomething() is static method.<br>
 It has no relationship with bClass.
