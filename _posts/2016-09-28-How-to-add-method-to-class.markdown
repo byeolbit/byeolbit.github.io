@@ -8,7 +8,7 @@ description: Object.prototype.method와 Object.method
 
 자바스크립트에서 오브젝트에 메소드를 추가하는 방법에는 두 가지가 있다. 하나는 프로토타입(prototype)에 메소드를 추가하는 방법이고, 다른 하나는 오브젝트에 스태틱 메소드(static method)를 추가하는 방법이다.<br>
 
-- Prototype
+#### Prototype
 {% highlight javascript %}
 function testPrototype(){
         this.a = 1;
@@ -32,7 +32,7 @@ function testPrototype(){
 `testA.logsomething();`와 `testB.logsomething();`둘 다 오브젝트의 멤버인 a와 b의 값의 합인 3을 출력하게 된다. 프로토타입에 logsomething()이 추가되었기 때문에, 프로토타입에 메소드가 추가되기 전에 생성된 오브젝트라도, 프로토타입에 추가된 메소드를 사용할 수 있다.<br>
 
 
-- Static
+#### Static
 {% highlight javascript %}
     function testStatic(){
         this.a = 1;
