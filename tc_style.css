@@ -439,6 +439,15 @@ body {
     text-align: center;
 }
 
+.distribute a{
+    text-decoration: none !important;
+    color: rgb(60,60,60);
+}
+
+.distribute a:hover{
+    color: #337ab7;
+}
+
 .distribute img {
     height: 3em;
     margin-right: 4px;
