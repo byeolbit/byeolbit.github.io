@@ -1,38 +1,313 @@
-body {
-    margin: 0;
+/*
+ * Globals
+ */
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    margin-top: 0;
+    font-weight: lighter;
+    color: #333;
 }
 
-.contents{
-    background: url("https://upload.wikimedia.org/wikipedia/commons/6/64/ChicagoFromCellularField.jpg");
-    background-size: 110vw !important;
-    background-repeat: repeat-y !important;
-    background-attachment: inherit;
-    height: 100vh;
+body {
+    font-family: "Noto Sans KR",Helvetica,Arial,sans-serif !important;
+}
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+    .container {
+        width: 920px;
+    }
+}
+
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/*
+ * Masthead for nav
+ */
+
+.blog-masthead {
+    background-color: #428bca;
+    -webkit-box-shadow: inset 0 -2px 5px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 -2px 5px rgba(0, 0, 0, .1);
+}
+
+/* Nav links */
+.blog-nav-item {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    font-weight: 500;
+    color: #cdddeb;
+}
+
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Active state gets a caret at the bottom */
+.blog-nav .active {
+    color: #fff;
+}
+
+.blog-nav .active:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -5px;
+    vertical-align: middle;
+    content: " ";
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid;
+    border-left: 5px solid transparent;
+}
+
+/*
+ * Blog name and description
+ */
+
+.blog-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.blog-title {
     margin-left: auto;
     margin-right: auto;
-    margin-top:50px;
-    width: 100vw;
+    padding: 20px 0 10px 0;
+    margin-bottom: 0;
+    text-align: center;
 }
 
-.card {
-    border: rgba(200,200,200,0.5) solid 1px;
-    border-radius: 10px;
-    box-shadow: 0px 20px 20px rgba(0,0,0,0.5);
-    cursor: move;
+.blog-title hr {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    border-width: 3px;
+    border-color: #303030;
+}
+
+.blog-title h1 {
+    font-size: 60px;
+    font-weight: normal;
+    color: #303030;
+    text-decoration: none;
+}
+
+#site-title {
+    color: #303030;
+    text-decoration: none;
+}
+
+.blog-description {
+    font-weight: lighter;
+    font-size: 18px;
+    color: #303030;
+}
+
+/*
+ * Main column and sidebar layout
+ */
+
+.blog-main {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+    padding: 15px;
+    margin: 0 -15px 15px;
+}
+
+.sidebar-module-inset {
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+    margin-bottom: 0;
+}
+
+/* Pagination */
+.pager {
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+.pager > li > a {
+    width: 140px;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.page-title {
+    font-size: 48px;
+    padding-bottom: 12px;
+
+}
+
+.post-list h2 {
+    font-size: 30px;
+}
+
+.post-list {
+    padding-left: 0;
+}
+
+.post-list li {
+    list-style: none;
+}
+
+.post-list hr {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    border-width: 3px;
+    border-color: #303030;
+}
+
+.rss-subscribe {
+    font-weight: 300;
+}
+
+.list-container {
+    padding-bottom: 20px;
+    border-bottom: 1px solid darkgray;
+}
+
+.list-container:last-child {
+    border-bottom: none;
+}
+
+.post-meta {
+    line-height: 2em;
+    color: darkgray;
+    font-weight: 300;
+}
+
+.post-description {
+    font-weight: 200;
+    color: #555;
+    font-size: 18px;
+}
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+    margin-bottom: 60px;
+}
+
+.blog-post-title {
+    margin-bottom: 10px;
+    font-size: 38px;
+}
+
+.blog-post-meta {
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #999;
+}
+
+.blog-post-content {
+    font-weight: 300;
+}
+.profile-container{
+    text-align: center;
+}
+
+.profile_pic{
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-post-content p {
+    padding-bottom: 10px;
+    line-height: 1.6em;
+}
+
+.return-to-list {
+    text-align: center;
+}
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+    padding: 40px 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+.blog-footer li {
+    list-style: none;
+}
+
+.blog-footer p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-col {
+    font-weight: 300;
+    display: inline-block;
+    width: 45%;
+}
+
+.copyright {
+    padding-top: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: gray;
+    font-weight: 300;
+}
+
+.contents {
+    width: 90vw;
+    max-width: 1000px;
+    height:auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    min-width: 790px;
+}
+
+.tl-contents{
+    background: url("img/bg1.jpg");
+    background-size: 1920px !important;
+    background-repeat: no-repeat !important;
+    background-attachment: inherit;
+    height: 700px;
+    margin-top:30px;
+    width: 90vw;
+    min-width: 790px;
+    max-width: 1000px;
+}
+
+.card-wrapper {
     height: 520px;
-    margin-left : auto;
-    margin-right : auto;
-    overflow: hidden;
-    position: relative;
-    transition : box-shadow 0.4s ease;
     width: 350px;
 }
 
-.card:active {
-    box-shadow: 0px 40px 30px rgba(0,0,0,0.7);
-}
-
-.card-contents {
+.tl-card-contents {
     color:white;
     font-family: sans-serif;
     height: inherit;
@@ -40,29 +315,12 @@ body {
     text-align: center;
     text-shadow: 0px 4px 4px rgba(0,0,0,0.6);
     width: inherit;
-    z-index: 2;
 }
 
-.card-color-clear {
-    background-color:rgba(255,255,255,1);
-}
-
-.card-color-white {
-    background-color:rgba(255,255,255,0.4);
-}
-
-.card-color-grey {
-    background-color:rgba(120,120,120,0.4);
-}
-
-.card-color-black {
-    background-color:rgba(30,30,30,0.7);
-}
-
-.card-contents h1 {
-    font-size: 2.5em;
-    font-weight: 100;
-    margin-top:40px;
+.tl-card-contents h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-top:60px;
     width: inherit;
 }
 
@@ -73,18 +331,14 @@ body {
     box-shadow: 0px 4px 4px rgba(0,0,0,0.6);
     height:200px;
     margin-bottom:20px;
-    margin-top:20px;
+    margin-top:30px;
     margin-left: auto;
     margin-right: auto;
     width:200px;
 }
 
-.card-bg {
-    z-index: 1;
-}
-
 .color-button-container {
-    width: 80px;
+    width: auto;
     height: 20px;
     padding-top: 16px;
     margin-left: auto;
@@ -116,38 +370,103 @@ body {
     background-color:rgb(40,40,40);
     font-size:0.8em;
     margin-bottom:4px;
-    margin-top:4px;
+    margin-top:14px;
     padding-top:8px;
     padding-bottom:8px;
+    font-weight: bold;
 }
 
 .auto-graph a {
     color: white;
-    text-decoration: none;
+    text-decoration: none !important;
+}
+
+.auto-graph a:hover{
+    color: white;
+    text-decoration: none !important;
 }
 
 .control-panel {
+    font-family: "Noto Sans KR",Helvetica,Arial,sans-serif !important;
     background-color: rgba(50,50,50,1);
     color : rgb(250,250,250);
     display:block;
-    width:100vw;
-    height:50px;
-    position:fixed;
-    padding: 0;
-    top:0;
-    right: 0;
+    width:100%;
+    height:60px;
+    padding: 4px 4px 4px 4px;
+    position:relative;
     z-index: 3;
+    text-align: center;
 }
-
-.control-panel p {
-    font-size:1.2em;
-    margin: 0.5em;
-}
-
-.control-panel p input {
+.control-panel input {
+    margin-top:10px;
     width: 90px;
+    height: 31px;
+    color: rgb(60,60,60);
+    text-align: right;
 }
-.control-panel p button {
+.control-panel button {
+    font-family: "Noto Sans KR",Helvetica,Arial,sans-serif !important;
+    font-weight:normal;
     width: 100px;
-    height: 30px;
-} 
+    margin-left : 4px;
+    margin-right : 4px;
+}
+
+.card-color-clear {
+    background-color:rgba(255,255,255,1);
+}
+
+.card-color-white {
+    background-color:rgba(255,255,255,0.4);
+}
+
+.card-color-grey {
+    background-color:rgba(120,120,120,0.4);
+}
+
+.card-color-black {
+    background-color:rgba(30,30,30,0.7);
+}
+
+.distribute {
+    margin-top: 20px;
+    padding: 20px 20px 0px 20px;
+    width:auto;
+    height:120px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.distribute img {
+    height: 3em;
+    margin-right: 4px;
+}
+
+.distribute span {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.b-download {
+    height:60px;
+    width: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgb(245,245,245);
+    border: rgb(235,235,235) 1px solid !important;
+    border-radius: 10px !important;
+}
+
+.btn:focus {
+  outline: none !important;
+}
+
+footer {
+    text-align: center;
+    color: rgb(60,60,60);
+    font-weight: lighter;
+    padding: 0px 20px 40px 20px;
+    min-width: 790px;
+}
