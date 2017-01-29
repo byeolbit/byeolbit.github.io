@@ -518,11 +518,12 @@ hr.style-two {
     background-color: rgb(245,245,245);
     border: rgb(235,235,235) 1px solid !important;
     border-radius: 10px !important;
+    padding-top: 8px !important;
+    padding-right: 20px !important;
 }
 
-.btn:focus:hover {
+.btn:focus:hover:after:active {
   outline: none !important;
-  background-color: rgb(60,60,60);
 }
 
 footer {
