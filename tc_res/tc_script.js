@@ -74,11 +74,11 @@ $(document).ready(function(){
             //var s = $targetBg.css('background-position');
             $targetBg.css('background-attachment','fixed');
             $cardBg.css('background-position','0px 0px');
-            $bFix.text('bgFixOff');
+            $bFix.text('Background fix off');
         }
         else {
             $targetBg.css('background-attachment','inherit');
-            $bFix.text('bgFixOn');
+            $bFix.text('Background fix on');
         }
         
         bgAttach = !bgAttach;
@@ -95,17 +95,47 @@ $(document).ready(function(){
 
     $cb1.click(function(){
         $cc.css('background-color','rgba(255,255,255,0.4)');
+        cardColor = $cc.css('background-color');
     });
     $cb2.click(function(){
         $cc.css('background-color','rgba(120,120,120,0.4)');
+        cardColor = $cc.css('background-color');
     });
     $cb3.click(function(){
         $cc.css('background-color','rgba(30,30,30,0.7)');
+        cardColor = $cc.css('background-color');
     });
     $cb4.click(function(){
         $cc.css('background-color','rgba(0,0,0,0)');
+        cardColor = $cc.css('background-color');
     });
 
+    $maxBtn = $('.wide-button');
+    $contents = $('.contents');
+
+    $maxBtn.click(function(){
+        if ($maxBtn.text() == '+') {
+            $contents.addClass('wide');
+            $targetBg.addClass('wide');
+            $maxBtn.removeClass('align-right');
+            $maxBtn.text('-');
+            $demoCard.position({
+                my: 'center',
+                at: 'center',
+                of: '#bgEl'
+            });
+        } else {
+            $contents.removeClass('wide');
+            $targetBg.removeClass('wide');
+            $maxBtn.addClass('align-right');
+            $maxBtn.text('+');
+            $demoCard.position({
+                my: 'center',
+                at: 'center',
+                of: '#bgEl'
+            });
+        }
+    });
 });
 
 function applyOption($dc, bg, fv, cc, d, s){
