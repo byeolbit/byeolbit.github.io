@@ -529,6 +529,7 @@ hr.style-two {
 .like {
     margin-left:auto !important;
     margin-right:auto !important;
+    width: 600px;
 }
 
 footer {
