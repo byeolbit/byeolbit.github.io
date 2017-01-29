@@ -527,10 +527,11 @@ hr.style-two {
 }
 
 .like {
-    margin-left:auto !important;
-    margin-right:auto !important;
-    width: 140px;
-    margin-top:20px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 600px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 footer {
