@@ -124,6 +124,8 @@ $(document).ready(function(){
                 at: 'center',
                 of: '#bgEl'
             });
+            applyOption($demoCard, background,
+                        filterValue, cardColor, draggable, shadow);
         } else {
             $contents.removeClass('wide');
             $targetBg.removeClass('wide');
@@ -134,6 +136,8 @@ $(document).ready(function(){
                 at: 'center',
                 of: '#bgEl'
             });
+            applyOption($demoCard, background,
+                        filterValue, cardColor, draggable, shadow);
         }
     });
 });
