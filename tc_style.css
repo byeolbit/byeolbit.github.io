@@ -526,9 +526,9 @@ hr.style-two {
   outline: none !important;
 }
 
-.fb-like {
-    margin-left:auto;
-    margin-right:auto;
+.like {
+    margin-left:auto !important;
+    margin-right:auto !important;
 }
 
 footer {
