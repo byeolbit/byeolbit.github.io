@@ -526,6 +526,14 @@ hr.style-two {
   outline: none !important;
 }
 
+.like {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 600px;
+    margin-top: 10px;
+    text-align: center;
+}
+
 footer {
     text-align: center;
     color: rgb(60,60,60);

@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Transparent Card Deisgn</title>
+        <title>translucent</title>
         <link rel="stylesheet" href="tc_style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -14,6 +14,14 @@
         <script src="tc_res/tc_script.js"></script>
     </head>
     <body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1046213422159466";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
         <header class = "blog-title">
             <h1 class="site-title">[ translucent ]</h1>
             <p class = "blog-description"> jQuery plugin - Translucent card design </p>
@@ -70,6 +78,9 @@
                 <span>View on Github</span>
             </div>
             </a>
+        </div>
+        <div class="like">
+            <div class="fb-like" data-href="https://byeolbit.github.io/translucent" data-width="300" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
         </div>
         <hr class="style-two"/>
         </div>
