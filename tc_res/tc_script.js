@@ -13,7 +13,7 @@
 
 $(document).ready(function(){
     var $demoCard = $('#cw'),
-        background = '.tl-contents',
+        background = '#bgEl',
         $targetBg = $(background),
         filterValue = 5,
         cardColor = 'white',
@@ -21,7 +21,7 @@ $(document).ready(function(){
         shadow = true,
         bgAttach;
 
-    var $card = $demoCard.children('.tl-card'),
+    var $card = $demoCard.children('.tl-card-container'),
         $cardBg = $demoCard.children('.tl-card-bg-container').
                             children('.tl-card-bg');
 
@@ -44,20 +44,20 @@ $(document).ready(function(){
     else
         bgAttach = false;
 
+    applyOption($demoCard, background,
+                filterValue, cardColor, shadow);
+
     $demoCard.position({
         my: 'center',
         at: 'center',
         of: '#bgEl'
     });
-    applyOption($demoCard, background,
-                filterValue, cardColor, draggable, shadow);
 
     $bNum.attr('placeholder',filterValue);
 
     $bBlur.click(function(){
         filterValue = $bNum.val();
-        applyOption($demoCard, background,
-                    filterValue, cardColor, draggable, shadow);
+        $demoCard.translucent('cardBgInit',$demoCard, $targetBg, $demoCard.find('.tl-card-bg-container').find('.tl-card-bg')[0].style, filterValue);
     });
 
     $bBg.click(function(){
@@ -65,8 +65,6 @@ $(document).ready(function(){
         $targetBg.css('background',
                       bgImages[Math.floor((Math.random() * 10))%6]);
         $targetBg.css('background-attachment',t);
-        applyOption($demoCard, background,
-                    filterValue, cardColor, draggable, shadow);
     });
 
     $bFix.click(function(){
@@ -82,9 +80,6 @@ $(document).ready(function(){
         }
         
         bgAttach = !bgAttach;
-        
-        applyOption($demoCard, background,
-                    filterValue, cardColor, draggable, shadow);
     });
 
     var $cb1 = $('#cb1'),
@@ -124,8 +119,6 @@ $(document).ready(function(){
                 at: 'center',
                 of: '#bgEl'
             });
-            applyOption($demoCard, background,
-                        filterValue, cardColor, draggable, shadow);
         } else {
             $contents.removeClass('wide');
             $targetBg.removeClass('wide');
@@ -136,17 +129,30 @@ $(document).ready(function(){
                 at: 'center',
                 of: '#bgEl'
             });
-            applyOption($demoCard, background,
-                        filterValue, cardColor, draggable, shadow);
+        }
+    });
+
+    $demoCard.draggable({
+        containment: '#bgEl',
+        start: function(event, ui) {
+                $(this).css({
+                    'box-shadow': '0px 40px 30px rgba(0,0,0,0.7)',
+                    'transition' : 'box-shadow .4s ease'
+                });
+        },
+        stop: function(event, ui) {
+                $(this).css({
+                    'box-shadow': 'none',
+                    'transition' : 'box-shadow .4s ease'
+                });
         }
     });
 });
 
-function applyOption($dc, bg, fv, cc, d, s){
+function applyOption($dc, bg, fv, cc, s){
     $dc.translucent(bg,{
         filterValue : fv,
         cardColor : cc,
-        draggable : d,
         shadow : s
     });
 }
