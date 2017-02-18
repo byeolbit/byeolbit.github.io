@@ -534,6 +534,11 @@ hr.style-two {
     text-align: center;
 }
 
+.g-like {
+    margin: 0px 5px 0px 5px;
+    display: inline-block;
+}
+
 footer {
     text-align: center;
     color: rgb(60,60,60);
