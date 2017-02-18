@@ -290,7 +290,7 @@ body {
 }
 
 .tl-contents{
-    background: url("img/bg1.jpg");
+    background: url("./img/bg1.jpg");
     background-size: 1920px !important;
     background-repeat: no-repeat !important;
     background-attachment: inherit;
@@ -532,6 +532,11 @@ hr.style-two {
     width: 600px;
     margin-top: 10px;
     text-align: center;
+}
+
+.g-like {
+    margin: 0px 5px 0px 5px;
+    display: inline-block;
 }
 
 footer {
