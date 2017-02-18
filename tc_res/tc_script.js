@@ -57,7 +57,7 @@ $(document).ready(function(){
 
     $bBlur.click(function(){
         filterValue = $bNum.val();
-        $demoCard.translucent('cardBgInit',$demoCard, $targetBg, $demoCard.find('.tl-card-bg-container').find('.tl-card-bg')[0].style, filterValue);
+        $demoCard.translucent('blur',filterValue);
     });
 
     $bBg.click(function(){

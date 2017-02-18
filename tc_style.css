@@ -290,7 +290,7 @@ body {
 }
 
 .tl-contents{
-    background: url("img/bg1.jpg");
+    background: url("./img/bg1.jpg");
     background-size: 1920px !important;
     background-repeat: no-repeat !important;
     background-attachment: inherit;
