@@ -5,7 +5,7 @@ author:
 
 description: Space for memo codes
 baseurl: "" # the subpath of your site, e.g. /blog
-#url: "https://byeolbit.github.io" # the base hostname & protocol for your site
+url: "https://byeolbit.github.io" # the base hostname & protocol for your site
 twitter_username: byeolbit
 github_username: byeolbit
 
