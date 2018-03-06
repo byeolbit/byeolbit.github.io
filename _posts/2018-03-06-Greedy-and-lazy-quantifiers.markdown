@@ -6,8 +6,6 @@ categories: Regexp
 description: Greedy and lazy quantifiers
 ---
 
-# Greedy and lazy quantifiers
-
 **quantifier**는 앞에 온 대상의 양을 결정하는 부호다.
 `+`는 1회 이상, `*`는 0회 이상, `?`는 0또는 1회를 의미한다.
 
