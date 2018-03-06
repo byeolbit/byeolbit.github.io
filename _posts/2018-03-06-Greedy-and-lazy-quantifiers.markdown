@@ -138,4 +138,5 @@ el.match(barRegex)
 
 #### 참고
 [https://javascript.info/regexp-greedy-and-lazy](https://javascript.info/regexp-greedy-and-lazy)
+
 [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#quantifiers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#quantifiers)
